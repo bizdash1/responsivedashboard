@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title> <%=title%> </title>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+  <title> Dashboard </title>
+  <meta name="Clever Dashboard" content="Paypal, Stripe, Google, Facebook, and Youtube Analytical Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Paypal, Stripe, Google, Facebook, and Youtube Analytical Dashboard">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="Website Address Goes Here">
+  <meta property="og:image" content="Icon Image Address Goes Here">
+  <meta property="og:description" content="A one to two sentence description of the website">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"> -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+</head>
+
+<body>
+
+  <section id="contents">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <i class="fa fa-align-right"></i>
+          </button>
+          <a class="navbar-brand" href="#">Hello<span class="main-color">&nbsp; Qazi</span></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">My profile <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o fw"></i> Contact Us</a></li>
+                <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/users/logout"><i class="fa fa-sign-out"></i> Log out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="welcome">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content">
+              <h2>Welcome to Dashboard</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="statistics">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="col-md-6">
+              <div class="box">
+                <i class="fa fa-paypal fa-fw warning"></i>
+                <div class="info">
+                  <h3>Paypal</h3> <span>Revenue</span>
+                  <div>
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                      <i class="fa fa-sign-in"></i>Login
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-8" id="blue">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="box">
+                <i class="fa fa-cc-stripe fa-fw dark"></i>
+                <div class="info">
+                  <h3>Stripe</h3> <span>Revenue</span>
+                  <div>
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                      <i class="fa fa-sign-in"></i>Login
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-8" id="blue">
+
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="chart-container">
+              <table id="payPal">
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="chart-container">
+              <table id="ppTran">
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="chart-container">
+              <h3>Chart</h3>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="chart-container">
+              <table id="stripe">
+              </table>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="chart-container">
+              <h3>Chart2</h3>
+              <canvas id="myChart2"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Modal Bootstrap CSS -->
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Login</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <label class="sr-only" for="loginEmail">Email address</label>
+                  <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                </div>
+                <div class="form-group col-12">
+                  <label class="sr-only" for="loginPassword">Password</label>
+                  <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                </div>
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Remember me</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="/js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="/js/plugins.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js">
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script src="/js/dashboard.js"></script>
+  <script src="/js/script.js"></script>
+
+  <script>
+    <% if (flash.success && flash.success.length>0) { %>
+        new Noty({
+            theme : 'relax',
+            text : '<%=flash.success%>',
+            type : 'success',
+            layout : 'topRight',
+            timeout : 1500
+        }).show();
+    <% } %>
+    <% if (flash.error && flash.error.length>0) { %>
+        new Noty({
+            theme : 'relax',
+            text : '<%=flash.error%>',
+            type : 'error',
+            layout : 'topRight',
+            timeout : 1500
+        }).show();
+    <% } %>
+</script>
+
+</body>
+
+</html>

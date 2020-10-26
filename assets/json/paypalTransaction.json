@@ -1,0 +1,52 @@
+[{
+  "transaction_details": [{
+    "transaction_info": {
+      "paypal_account_id": "3UP8DUU53C73A",
+      "transaction_id": "7BP36878F8593925F",
+      "transaction_event_code": "T0000",
+      "transaction_initiation_date": "2020-08-29T18:03:49+0000",
+      "transaction_updated_date": "2020-08-29T18:03:49+0000",
+      "transaction_amount": {
+        "currency_code": "USD",
+        "value": "-100.00"
+      },
+      "transaction_status": "S",
+      "protection_eligibility": "02"
+    },
+    "payer_info": {
+      "account_id": "3UP8DUU53C73A",
+      "email_address": "sb-ckkdu2307884@business.example.com",
+      "address_status": "N",
+      "payer_status": "Y",
+      "payer_name": {
+        "alternate_full_name": "John Doe's Test Store"
+      },
+      "country_code": "US"
+    },
+    "shipping_info": {
+      "name": "John, Doe",
+      "address": {
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "country_code": "US",
+        "postal_code": "95131"
+      }
+    },
+    "cart_info": {},
+    "store_info": {},
+    "auction_info": {},
+    "incentive_info": {}
+  }],
+  "account_number": "6HB76GKKNCYJS",
+  "start_date": "2020-08-29T07:00:00+0000",
+  "end_date": "2020-08-30T06:59:59+0000",
+  "last_refreshed_datetime": "2020-09-25T08:59:59+0000",
+  "page": 1,
+  "total_items": 1,
+  "total_pages": 1,
+  "links": [{
+    "href": "https://api.sandbox.paypal.com/v1/reporting/transactions/transactions?start_date=2020-08-29T00%3A00%3A00-0700&end_date=2020-08-29T23%3A59%3A59-0700&transaction_id=7BP36878F8593925F&fields=all&page_size=100&page=1",
+    "rel": "self",
+    "method": "GET"
+  }]
+}]
