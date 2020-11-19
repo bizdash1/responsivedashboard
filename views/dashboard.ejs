@@ -66,55 +66,116 @@
     <div class="welcome">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-12">
+          <div class="col-md-6">
             <div class="content">
               <h2>Welcome to Dashboard</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+              <div>
+                <a role="button" data-toggle="modal" data-target="#loginModal">
+                  <i class="fa fa-paypal fa-fw warning"></i>
+                  <i class="fa fa-sign-in"></i>Login
+                </a>
+                <a role="button" data-toggle="modal" data-target="#loginModal">
+                  <i class="fa fa-cc-stripe fa-fw dark"></i>
+                  <i class="fa fa-sign-in"></i>Login
+                </a>
+              </div>
             </div>
           </div>
+          <div class="col-md-3">
+             <div class="content">
+                <h2>Total Balance</h2>
+              </div>
+              <div class="col-md-3">
+                <div class="chart-container">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <div class="content">
+                <h2>Available Balance</h2>
+              </div>
+              <div class="col-md-3">
+                <div class="chart-container">
+
+                </div>
+              </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
+
     <section class="statistics">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="col-md-6">
+            <div class="col-md-3">
               <div class="box">
                 <i class="fa fa-paypal fa-fw warning"></i>
                 <div class="info">
-                  <h3>Paypal</h3> <span>Revenue</span>
-                  <div>
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
-                      <i class="fa fa-sign-in"></i>Login
-                    </a>
+                  <h3>Paypal</h3>
+                  <p>Total Balance</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="chart-container">
+                    <table class= "account" id="payPalTot">
+                    </table>
                   </div>
                 </div>
-                <div class="col-md-8" id="blue">
-
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <i class="fa fa-paypal fa-fw warning"></i>
+                <div class="info">
+                  <h3>Paypal</h3>
+                  <p>Available Balance</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="chart-container">
+                    <table class= "account" id="payPalAva">
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-3">
               <div class="box">
                 <i class="fa fa-cc-stripe fa-fw dark"></i>
                 <div class="info">
-                  <h3>Stripe</h3> <span>Revenue</span>
-                  <div>
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
-                      <i class="fa fa-sign-in"></i>Login
-                    </a>
+                  <h3>Stripe</h3>
+                  <p>Total Balance</p>
+                </div>
+                <div class="col-md-3">
+                  <div class="chart-container">
+                    <table class= "account" id="stripeTot">
+                    </table>
                   </div>
                 </div>
-                <div class="col-md-8" id="blue">
-
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <i class="fa fa-cc-stripe fa-fw dark"></i>
+                <div class="info">
+                  <h3>Stripe</h3>
+                  <p>Available Balance</p>
                 </div>
+                <div class="col-md-3">
+                  <div class="chart-container">
+                    <table class= "account" id="stripeAva">
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <section class="charts">
@@ -122,13 +183,91 @@
         <div class="row">
           <div class="col-md-6">
             <div class="chart-container">
-              <table id="payPal">
+              <table class="container">
+                <thead>
+                  <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Transaction</h1></th>
+                    <th><h1>Amount</h1></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
           <div class="col-md-6">
             <div class="chart-container">
-              <table id="ppTran">
+              <table class="container">
+                <thead>
+                  <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Transaction</h1></th>
+                    <th><h1>Amount</h1></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                  <tr>
+                    <td>11/20/2020</td>
+                    <td>Google</td>
+                    <td>6369</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -141,25 +280,51 @@
         <div class="row">
           <div class="col-md-4">
             <div class="chart-container">
-              <h3>Chart</h3>
-              <canvas id="myChart"></canvas>
+              <h3>PayPal: 15 day</h3>
+              <canvas id="payPal15d"></canvas>
             </div>
           </div>
           <div class="col-md-4">
             <div class="chart-container">
-              <table id="stripe">
-              </table>
+              <h3>PayPal and Stripe: 15 day</h3>
+              <canvas id="payPal15dandStripe15d"></canvas>
             </div>
           </div>
           <div class="col-md-4">
             <div class="chart-container">
-              <h3>Chart2</h3>
-              <canvas id="myChart2"></canvas>
+              <h3>Stripe: 15 day</h3>
+              <canvas id="stripe15d"></canvas>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="charts">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="chart-container">
+              <h3>PayPal: 12 month</h3>
+              <canvas id="payPal12m"></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="chart-container">
+              <h3>PayPal and Stripe: 12 month</h3>
+              <canvas id="payPal12mandStripe12m"></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="chart-container">
+              <h3>Stripe: 12 month</h3>
+              <canvas id="stripe12m"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
 
   <!-- Modal Bootstrap CSS -->
   <div id="loginModal" class="modal fade" role="dialog">
@@ -198,7 +363,7 @@
       </div>
     </div>
   </div>
-  </div>
+
 
   <script src="/js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="/js/plugins.js"></script>
@@ -214,25 +379,32 @@
   <script src="/js/script.js"></script>
 
   <script>
-    <% if (flash.success && flash.success.length>0) { %>
-        new Noty({
-            theme : 'relax',
-            text : '<%=flash.success%>',
-            type : 'success',
-            layout : 'topRight',
-            timeout : 1500
-        }).show();
-    <% } %>
-    <% if (flash.error && flash.error.length>0) { %>
-        new Noty({
-            theme : 'relax',
-            text : '<%=flash.error%>',
-            type : 'error',
-            layout : 'topRight',
-            timeout : 1500
-        }).show();
-    <% } %>
-</script>
+    < %
+    if (flash.success && flash.success.length > 0) {
+      % >
+      new Noty({
+        theme: 'relax',
+        text: '<%=flash.success%>',
+        type: 'success',
+        layout: 'topRight',
+        timeout: 1500
+      }).show(); <
+      %
+    } % >
+    <
+    %
+    if (flash.error && flash.error.length > 0) {
+      % >
+      new Noty({
+        theme: 'relax',
+        text: '<%=flash.error%>',
+        type: 'error',
+        layout: 'topRight',
+        timeout: 1500
+      }).show(); <
+      %
+    } % >
+  </script>
 
 </body>
 
